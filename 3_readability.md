@@ -63,7 +63,7 @@ IDE — крутой блокнот с функциями:
 Вот пример, что если длина строки не больше 79-80 символов, то легко сравнить две версии кода без горизонтального скроллинга. В качестве примере взял задачу 'Печенье с предсказаниями'.
 
 На скриншотах IDE Wing и Visual Studio Code:
-![IDE Wing Split Two Window](images/3_2_2_vertical_rulers_two_column_wing 1.png)
+![IDE Wing Split Two Window](images/3_2_2_vertical_rulers_two_column_wing%201.png)
 ![IDE VSCode Split Two Window](images/3_2_2_vertical_rulers_two_column_vscode%201.png)
 
 
