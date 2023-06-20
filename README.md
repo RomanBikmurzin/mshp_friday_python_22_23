@@ -19,3 +19,4 @@ repository features all posts I have produced and all polls I have come up with 
    - [ ] что такое IDE?
    - [ ] что такое красная вертикальная линия в IDE (в том числе в IDE Wing)?
    - [ ] языки программирования
+   - [ ] new block
