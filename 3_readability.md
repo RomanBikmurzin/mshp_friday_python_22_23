@@ -590,8 +590,4 @@ def put_ship(table: list, x:int, y:int, ship_size:int) -> None:
                 table[y][x] = "#"
     else:
         table[y][x] = "#"
-
-table = ['-'*8 for _ in range(8)]
-put_ship(table, 4, 4, 1)
-
 ```
