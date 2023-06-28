@@ -39,6 +39,7 @@
    - [ ] Sympy: библотека для символьных вычислений
    - [ ] OpenCV: применение двумерных списков для обработки изображений
    - [ ] AI, ML, DL: как машину учатся (и распознают рукописные цифры MNIST)
+   - [ ] AI: Reinforcement Learning X Dota 2
 3. [Читаемость (readability)](3_readability.md)
    - [пройти викторину по группе 3](https://forms.gle/e9rT5qgw7EV4n3Wz5)
    - [x] читаемость кода x PEP 8
