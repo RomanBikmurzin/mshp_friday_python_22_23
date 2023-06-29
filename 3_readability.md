@@ -9,6 +9,7 @@
 - [сделать большие числа `299792458` более ясными](#сделать-большие-числа-299792458-более-ясными-299_792_458)
 - [что такое Git и GitHub и почему его нужно использовать на командных проектах?](#что-такое-git-и-github-и-почему-его-нужно-использовать-на-командных-проектах)
 - [аннотация типов (type hints)](#type-hints)
+- [линтеры как автопилот чистого кода](#линтеры-flake8)
 
 
 # Читаемость X PEP-8
@@ -595,4 +596,104 @@ def put_ship(table: list, x:int, y:int, ship_size:int) -> None:
                 table[y][x] = "#"
     else:
         table[y][x] = "#"
+```
+
+# линтеры: flake8
+
+**Линтер** — программа, которая проверяет код на соответствие стандартов-советов по читабельному коду (PEP-8 для Python). Советы описывают отступы, названия переменных, функций и классов, скобки, математические операции, длину строк, отступы между функциями и методами и множество других аспектов. Соблюдать советы  — основа кода, который легко поддерживать команде программистов.
+
+Советы (например, PEP-8 для Python или Java Code Conventions для Java) — проверенные десятилетиями способы сделать код единообразным и легко читаемым любым человеком. Писать читаемый (читабельный или чистый) код — заботиться о времени и внимании программистов, которые будут читать ваш код.
+
+### как установить в IDE Visual Studio Code?
+
+Нажать `Ctrl + Shift + P` (для Windows) или `cmd + Shift + P` (для macOS). 
+
+![linter_vscode_install_1](/images/3_10_1_install_vs_code.png)
+
+Выбираю `flake8`, потому что в этом линтере есть много всего из других аналогичных линтеров.
+
+![linter_vscode_install_2](/images/3_10_2_install_vs_code.png)
+
+### как отключить линтер в IDE Visual Studio Code?
+
+Нажать `Ctrl + Shift + X` или выбрать на панели сверху `View > Extensions`. 
+
+![linter_vscode_disable_1](/images/3_10_5_uninstall_vs_code.png)
+
+Найти нужное расширение (в нашем случае `flake8`), нажать правой клавишей мышки и выбрать `Disable` (отключить).
+
+![linter_vscode_disable_2](/images/3_10_6_uninstall_vs_code.png)
+
+### как пользоваться?
+
+Код до. Линтер включен. Видим сообщения об ошибках (красные волнистые линии), но кажется, что нет ошибок в языке. Сообщения об ошибках в этом случае — сообщения о том, что этот код не написан по советам PEP-8:
+
+![vscode_pep8_non_follower](/images/3_10_3_error_overview.png)
+
+Отдельно рассмотрю ошибки:
+
+`expected 2 blank lines, found 0flake8(E302)`
+
+![vs_code_two_blanks_between_function](/images/3_10_4_error_1.png)
+
+`missing whitespace after ':'flake8(E231)`. Между параметров функции и подсказкой типа должен быть пробел (по PEP-8).
+
+![vs_code_whitespace_in_type_hint](/images/3_10_4_error_2.png)
+
+`missing whitespace around modulo operatorflake8(E228)`. Когда используете оператор остатка от деления `%`, не забывайте о пробел между слагаемыми.
+
+![vs_code_whitespace_around_modulo](/images/3_10_4_error_3.png)
+
+`inline comment should start with '# 'flake8(E262)`. Однострочный комментарий всегда начинается с пробела. То есть так `# эта команда делает...`, а не так `#эта команда делает...`
+
+![vs_code_comment_missed_whitespace](/images/3_10_4_error_4.png)
+
+`no newline at end of fileflake8(W292)`. В конце любой программы должна быть пустая строчка. Так новому программисту будет легче начать писать и он ничего случайно не сломает переносом строки.
+
+![vs_code_no_whitespace_at_the_end](/images/3_10_4_error_5.png)
+
+
+
+```python
+#код до
+def main():
+    m = int(input())
+    data = int(input())
+    print(is_favorite_month(m, data))
+
+def get_month(data:int):
+    month = data//10_000  # 15_032_020 // 10_000 = 1503.202
+    month = month % 100   # 1503.202 % 100 = 03 = 3
+    return month
+def is_favorite_month(favorite_month:int, data:int):
+    month = get_month(data)
+    return ['Нет', 'Да'][month == favorite_month]
+
+
+if __name__ == '__main__':
+    main()
+```
+
+```python
+#код после
+def get_month(data: int):
+    month = data//10_000  # 15_032_020 // 10_000 = 1503.202
+    month = month % 100   # 1503.202 % 100 = 03 = 3
+    return month
+
+
+def is_favorite_month(favorite_month: int, data: int):
+    month = get_month(data)
+    return ['Нет', 'Да'][month == favorite_month]
+
+
+def main():
+    m = int(input())
+    data = int(input())
+    print(is_favorite_month(m, data))
+
+
+if __name__ == '__main__':
+    main()
+
 ```
