@@ -727,3 +727,44 @@ prime_numbers.discard(29)  #числа 29 нет в множестве. Мето
 ```
 
 4. создать пустое множество можно одним способом `empty_set = set()`. У словаря два способа `empty_dict = dict()` и `empty_dict = {}` (пустые фигурные скобки зарезервированы для пустого словаря. запомните это). У списка есть два способа `my_list = list()` и `my_list = []`.
+
+5. вводить множество целых чисел можно аналогично тому, как вы вводили список целых чисел:
+
+```python
+#вводится список целых чисел
+numbers = list(map(int, input().split()))
+
+#вводится множество целых чисел
+numbers = set(map(int, input().split()))
+```
+
+6. операции с множествами: объединение `A | B`, пересечение `A & B`, разность `A - B` и `B - A`, симметричная разность `(A-B) | (B-A)`
+
+```python
+#дано два множества стран
+countries_1 = {'USA', 'Australia', 'Mexico'}
+countries_2 = {'USA', 'France', 'Italy'}
+
+
+# объединение
+print(countries_1 | countries_2)  
+# {'Australia', 'USA', 'Italy', 'Mexico', 'France'}
+
+# пересечение
+print(countries_1 & countries_2)
+# {'USA'}
+
+# разность A-B
+print(countries_1 - countries_2)
+# {'Australia', 'Mexico'}
+
+# разность B-A
+print(countries_2 - countries_1)
+# {'France', 'Italy'}
+
+#симметричная разность (объединение разностей)
+print(countries_1 ^ countries_2)
+# {'Italy', 'Mexico', 'Australia', 'France'}
+```
+
+![set_operations](/images/1_11_set_operations.png)
