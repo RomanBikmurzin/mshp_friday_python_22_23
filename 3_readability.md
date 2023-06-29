@@ -610,7 +610,7 @@ def put_ship(table: list, x:int, y:int, ship_size:int) -> None:
 
 ![linter_vscode_install_1](/images/3_10_1_install_vs_code.png)
 
-Выбираю `flake8`, потому что в этом линтере есть много всего из других аналогичных линтеров.
+Выбираю `flake8`, потому что в этом линтере есть много всего из других аналогичных линтеров: `PyFlakes`, `pycodestyle`, `McCabe`. `flake8` — 3 в 1.
 
 ![linter_vscode_install_2](/images/3_10_2_install_vs_code.png)
 
