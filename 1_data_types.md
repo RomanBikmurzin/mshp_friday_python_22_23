@@ -733,7 +733,7 @@ print(any(sample))  #True
 
 # множество
 
-![Пройти викторину](https://forms.gle/5a8NtqDmyymXM73DA)
+[Пройти викторину](https://forms.gle/5a8NtqDmyymXM73DA)
 
 ![set_cover](/images/1_11_1_cover_set.png)
 
