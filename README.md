@@ -2,6 +2,8 @@
 
 ![cover](/images/cover.png)
 
+![color_scheme](/images/color_scheme_mshp_friday_python.png)
+
 # Введение
 
 ## Что это?
