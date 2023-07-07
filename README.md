@@ -32,6 +32,7 @@
    - [x] генератор множеств и словарей 2:  set & dict comprehension
    - [x] `bool()`, `all()`, `any()`
    - [x] тип данных: множество
+   - [ ] module, package, library, framework. В чем разница?
 2. [Сферы применения и библиотеки](/2_applications_and_libraries.md)
    - [x] язык Python: интерпретируемый, с сильной и динамической типизацией. Показываю эти свойства.
    - [x] языки программирования
@@ -40,6 +41,7 @@
    - [x] OpenCV: применение двумерных списков для обработки изображений
    - [x] AI, ML, DL: как машину учатся (и распознают рукописные цифры MNIST)
    - [x] AI: Reinforcement Learning X Dota 2
+   - [ ] Colorama
 3. [Читаемость (readability)](3_readability.md)
    - [пройти викторину по группе 3](https://forms.gle/e9rT5qgw7EV4n3Wz5)
    - [x] читаемость кода x PEP 8
