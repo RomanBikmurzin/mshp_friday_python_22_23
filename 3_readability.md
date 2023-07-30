@@ -144,12 +144,7 @@ IDE — крутой блокнот с функциями:
 ```python
 from random import choice  # Это команда для рандомного выбора из ...
 
-def generate_password(length:int=10, 
-                      auto_generate:bool=True, 
-                      feature_digits:bool=True,
-                      feaure_uppercase:bool=True,
-                      feature_lowercase:bool=True,
-                      feautre_punctuation:bool=True):
+def generate_password(length:int=10, auto_generate:bool=True, feature_digits:bool=True, feaure_uppercase:bool=True, feature_lowercase:bool=True, feautre_punctuation:bool=True):
     '''
     password generator by Клименко Илья
     '''
@@ -192,7 +187,12 @@ def generate_password(length:int=10, auto_generate:bool=True, feature_digits:boo
 [PEP-8](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator) подсказывает, как можно сделать так:
 
 ```python
-
+def generate_password(length:int=10, 
+                      auto_generate:bool=True, 
+                      feature_digits:bool=True,
+                      feaure_uppercase:bool=True,
+                      feature_lowercase:bool=True,
+                      feautre_punctuation:bool=True):
 ```
 
 Аналогичный совет есть по тому, как [сделать длинное условие на несколько строк](https://peps.python.org/pep-0008/#maximum-line-length:~:text=%23%20No%20extra%20indentation.) (вместо одной). Задача `"Отбор на конкурс"`:
