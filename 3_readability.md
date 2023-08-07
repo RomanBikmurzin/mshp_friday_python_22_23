@@ -148,6 +148,21 @@ IDE — крутой блокнот с функциями:
 
 ![IDE how to fix long condition](/images/IDE%20how%20to%20fix%20long%20condition.jpg)
 
+```python
+❌❌❌ было ❌❌❌
+if ((score%2==1) and (score%10==1 or score%10==3 or score%10==9) and (score>=1111) and (total<=6)):
+    pass
+
+
+
+✅✅✅ стало ✅✅✅
+if ((score%2==1) and                                    # условие 1
+    (score%10==1 or score%10==3 or score%10==9) and     # условие 2
+    (score>=1111) and                                   # условие 3
+    (total<=6)):                                        # условие 4
+    pass
+```
+
 Источник PEP-8:
 - [Что делать со сложным условием](https://peps.python.org/pep-0008/#maximum-line-length:~:text=%23%20No%20extra%20indentation.)
 - [Что делать с длинным математическием выражением](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator)
