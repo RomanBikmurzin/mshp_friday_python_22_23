@@ -149,9 +149,9 @@ IDE — крутой блокнот с функциями:
 ![IDE how to fix long condition](/images/IDE%20how%20to%20fix%20long%20condition.jpg)
 
 Источник PEP-8:
-👉 [Что делать со сложным условием](https://peps.python.org/pep-0008/#maximum-line-length:~:text=%23%20No%20extra%20indentation.)
-👉 [Что делать с длинным математическием выражением](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator)
-👉 [Что делать, если в вашей функции много параметров (функции будут в 4 модуле)](https://peps.python.org/pep-0008/#code-lay-out)
+- [Что делать со сложным условием](https://peps.python.org/pep-0008/#maximum-line-length:~:text=%23%20No%20extra%20indentation.)
+- [Что делать с длинным математическием выражением](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator)
+- [Что делать, если в вашей функции много параметров (функции будут в 4 модуле)](https://peps.python.org/pep-0008/#code-lay-out)
 
 
 ----
