@@ -348,6 +348,34 @@ print('число {} в степени {} равно {:.2f}!'.format(x, y, resul
 # число 2 в степени 0.5 равно 1.41!
 ```
 
+
+форматирование через `.format` можно сделать удобным, если прописать шаблонные переменные (переменные внутри фигурных скобок). Тогда можно в `.format` прописать шаблонная переменная=переменная.
+
+Обратите внимание на то, как удобно стало читать код:
+
+```python
+x = 21
+print("I am {age} years old".format(age=x))
+# I am 21 years old
+
+
+# код со скриншота:
+fio = 'Алеханов Роман Сергеевич'
+last_name, first_name, father_name = fio.split()
+x = 21
+y = 50
+
+print("My name is {name}. I am {age} years old".format(name=first_name, age=x))
+print("My father's name is {father_name}. He is old. He is {father_age} years old".format(father_name=father_name, father_age=y))
+
+'''
+My name is Роман. I am 21 years old
+My father's name is Сергеевич. He is old. He is 50 years old
+'''
+
+```
+
+
 ![3_3_5_f_string](/images/3_3_5_f_string.png)
 
 
